@@ -1,0 +1,18 @@
+user:
+    resource: "@UserBundle/Controller"
+    type: annotation
+
+exercices_shifumi:
+    resource: "@ExercicesShifumiBundle/Controller"
+    type: annotation
+
+exercices_archive:
+    resource: '@ExercicesArchiveBundle/Controller'
+    type: annotation
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+app_logout:
+    path: /logout

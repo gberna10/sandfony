@@ -1,0 +1,31 @@
+{# src/Exercices/ArchiveBundle/Resources/views/Archive/list.html.twig #}
+
+{% extends "@app_view/default/layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Archive de Fichiers -{% endblock %}
+
+{% block container %}
+  <table class="table">
+  	<thead class="thead-dark">
+	  <tr>
+	    <th scope="col">#</th>
+	    <th scope="col">taille</th>
+	    <th scope="col">Titre</th>
+	    <th scope="col">Description</th>
+	  </tr>
+	</thead>
+
+    {% for archive in archives %}
+	  
+	  <tbody>
+	    <tr>
+	      <th scope="row">1</th>
+	      <td>{{ archive.size }}</td>
+	      <td style="cursor:pointer;"><a href="{{ path('archive_download_file', {'id': archive.id}) }}">{{ archive.title }}</a></td>
+	      <td>{{ archive.description }}</td>
+	    </tr>
+	  </tbody>
+	
+    {% endfor %}
+  </table>
+{% endblock %}

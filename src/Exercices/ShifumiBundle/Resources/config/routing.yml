@@ -1,0 +1,3 @@
+exercices_shifumi_homepage:
+    path:     /
+    defaults: { _controller: ExercicesShifumiBundle:Default:index }
